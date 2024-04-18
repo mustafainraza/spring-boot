@@ -1,5 +1,6 @@
 package com.studentApp.StudentApp.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -44,13 +45,14 @@ public class StudentCourse {
         this.remarks = remarks;
     }
 
-//    public Student getStudent() {
-//        return student;
-//    }
-//
-//    public void setStudent(Student student) {
-//        this.student = student;
-//    }
+    @JsonIgnore
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 
     public Course getCourse() {
         return course;
@@ -67,4 +69,6 @@ public class StudentCourse {
     public void setDateOfJoining(LocalDate dateOfJoining) {
         this.dateOfJoining = dateOfJoining;
     }
+
+
 }

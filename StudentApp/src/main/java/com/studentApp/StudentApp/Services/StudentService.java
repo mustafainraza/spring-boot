@@ -12,7 +12,6 @@ import java.util.Optional;
 public class StudentService {
 
     private StudentRepository studentRepository;
-
     @Autowired
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
